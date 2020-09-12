@@ -3,8 +3,10 @@ const dotenv = require("dotenv");
 const session = require("express-session");
 const bodyParser = require("body-parser");
 const passport = require("passport");
-const passportLocal = require("passport-local").Strategy;
 const cors = require("cors");
+const connectDB = require("./config/db");
+const cookieParser = require("cookie-parser");
+const morgan = require("morgan");
 
 //Loading config
 dotenv.config({ path: "./config/config.env" });
