@@ -13,7 +13,7 @@ const Home =() => {
             <div id="home">{<Grid/>}</div>
             <div id="footer">{<Footer/>}</div>
         </div>
-    )
-}
+    ) 
+} 
 
 export default Home;
