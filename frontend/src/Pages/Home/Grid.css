@@ -1,0 +1,116 @@
+.container {
+    background-color: white;
+    width: 1200px;
+    margin: 30px auto;
+    margin: 30px auto;
+    border-radius: 15px;
+  
+    display: grid;
+    grid-template-rows: [page-start] repeat(1, 350px) [about] 400px [customer-review] 450px [contact-us] 300px [page-end];
+    /* grid-template-columns:repeat(4, [col-start] 1fr [col-end]) 450px [post-end] ; */
+    /* grid-template-columns:  ; */
+    grid-gap: 20px;
+  }
+  
+  .container > * {
+    /* for  all the grids */
+    padding: 20px;
+  }
+  
+  h1 {
+    color: white;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1em;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    text-transform: uppercase;
+  }
+  
+  h6 {
+    font-weight: 500;
+    letter-spacing: 2px;
+    z-index: 2;
+    font-size: 25px;
+    padding-top: 20px;
+    color: white;
+  }
+  
+  .row-1 {
+    background: url(../../img/header-bg.jpg);
+  
+    background-blend-mode: screen;
+    background-size: cover;
+    height: 100%;
+    position: relative;
+  
+    text-align: center;
+    grid-row: 1/2;
+  }
+  
+  .row-2 {
+    background: url(../../img/s2.jpg);
+    opacity: 0.8;
+    grid-row: 2/3;
+  }
+  
+  .review {
+    height: 150px;
+    padding-top: 30px;
+    border-radius: 5px;
+    box-shadow: 0.5px black;
+    text-align: justify;
+    background-color: white;
+    padding: 40px;
+    margin-top: 15px;
+    opacity: 0.8;
+  }
+  
+  .heading1 {
+    color: white;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1em;
+  
+    text-transform: uppercase;
+  }
+  
+  .review-1 {
+    padding: 40px;
+    height: 150px;
+    margin-top: 15px;
+    background-color: white;
+    text-align: justify;
+    border-radius: 5px;
+    box-shadow: 0.5px black;
+    opacity: 0.8;
+  }
+  
+  .row-3 {
+    text-align: center;
+    background-image: url("../../img/s2.jpg");
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0.5px black;
+    grid-row: 3/4;
+  }
+  
+  .row-4 {
+    background-color: var(--white);
+    background-image: url("../../img/s2.jpg");
+    grid-row: 4/5;
+    text-align: center;
+  }
+  
+  .contact {
+    background-color: white;
+    height: 210px;
+    opacity: 0.8;
+    padding-top: 20px;
+  }
+  
+  /* .column-1{
+      grid-column: col-start 1/ col-end 1;
+  } */
+  
