@@ -6,8 +6,8 @@ const AdminRoute = ({ component: Component, ...rest }) => {
   const adminloggedIn = useStoreState(
     (store) => store.accountModel.is_user_admin
   );
-  console.log("this is the logged in check inside private route");
-  console.log(loggedIn);
+  console.log("this is the logged in check inside admin route");
+  console.log(adminloggedIn);
   return adminloggedIn ? (
     <Route {...rest} render={(props) => <Component {...props} />} />
   ) : (
