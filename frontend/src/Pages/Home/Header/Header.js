@@ -4,7 +4,7 @@ import { Button, Nav, Navbar, NavDropdown, Form, FormControl } from 'react-boots
 
 export default function header(){
     return(
-<Navbar bg="light" expand="lg">
+<Navbar bg="dark" variant="dark" expand="lg">
   <Navbar.Brand href="#home">Water-Works 	&#169;</Navbar.Brand>
   <Navbar.Toggle aria-controls="basic-navbar-nav" />
   <Navbar.Collapse id="basic-navbar-nav">
