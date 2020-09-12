@@ -17,6 +17,9 @@ export default {
           withCredentials: true,
         }
       );
+
+      console.log(res);
+
       //   await actions.setToken(res.data.token);
     } catch (err) {
       console.log("login user is not working");
@@ -90,6 +93,6 @@ export default {
   setLogout: action(async (state) => {
     state.user_logged_in = false;
     state.is_user_admin = false;
-    state.user_data = null;
+    state.user_data = {};
   }),
 };

@@ -10,6 +10,14 @@ import "./App.css";
 
 const store = createStore(model);
 
+//Private Route, Admin Route
+const PrivateRoute = React.lazy(() =>
+  import("./components/PrivateRoute/PrivateRoute")
+);
+const AdminRoute = React.lazy(() =>
+  import("./components/PrivateRoute/AdminRoute")
+);
+
 const Home = React.lazy(() => import("./Pages/Home/Home"));
 
 function App() {
