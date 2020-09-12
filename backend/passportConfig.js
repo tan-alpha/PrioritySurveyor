@@ -1,6 +1,5 @@
 const User = require("./models/User");
 const bcrypt = require("bcryptjs");
-const { findOne } = require("./models/User");
 const localStrategy = require("passport-local").Strategy;
 
 module.exports = function (passport) {
@@ -31,9 +30,6 @@ module.exports = function (passport) {
 
   passport.deserializeUser((id, cb) => {
     User.findOne({ _id: id }, (err, user) => {
-      //   const userInformation = {
-      //     name: user.name,
-      //   };
       cb(err, user);
     });
   });
