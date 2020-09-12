@@ -12,7 +12,6 @@ router.post(
   "/",
   check("question", "Question is required"),
   async (req, res) => {
-    console.log(req);
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
       return res.status(400).json({ errors: errors.array() });
@@ -30,5 +29,21 @@ router.post(
     }
   }
 );
+
+//@route GET api/question
+//@desc Gets all questions
+//@access Private
+router.get("/", async (req, res) => {
+  const errors = validationResult(req);
+  if (!errors.isEmpty()) {
+    return res.status(400).json({ errors: errors.array() });
+  }
+  try {
+    const ques = await Question.find();
+    res.json(ques);
+  } catch (err) {
+    console.error(err);
+  }
+});
 
 module.exports = router;

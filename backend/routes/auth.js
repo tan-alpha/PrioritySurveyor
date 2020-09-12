@@ -4,6 +4,10 @@ const bcrypt = require("bcryptjs");
 const { check, validationResult } = require("express-validator");
 const User = require("../models/User");
 const passport = require("passport");
+const {
+  ensureAuthenticated,
+  isAdmin,
+} = require("../middleware/authenticationCheck");
 // const passportLocal = require("passport-local").Strategy;
 
 //@route POST api/auth/login
@@ -32,6 +36,7 @@ router.post(
           req.logIn(user, (err) => {
             if (err) throw err;
             res.send("Successfully Authenticated");
+            // return res.redirect("localhost:3000/");
             // console.log(req.user);
           });
         }
@@ -96,8 +101,16 @@ router.get("/logout", async (req, res) => {
 //@route GET api/auth/getuser
 //@desc Get user data
 //@access Public
-router.get("/getuser", (req, res) => {
+router.get("/getuser", ensureAuthenticated, (req, res) => {
+  console.log("this is passing through ensure Authenticated");
+  console.log(req.user);
   res.send(req.user);
+  // console.log(req.user);
+});
+
+router.get("/isadmin", isAdmin, (req, res) => {
+  console.log(req.user);
+  console.log("this is admin");
 });
 
 module.exports = router;
