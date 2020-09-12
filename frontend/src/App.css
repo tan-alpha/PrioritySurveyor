@@ -1,3 +1,13 @@
+*{
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  --bg-1: #e5e5e5;
+  --orange: #cf7500;
+  --white:#f4f4f4;
+
+}
+
+
 .App {
   text-align: center;
 }
