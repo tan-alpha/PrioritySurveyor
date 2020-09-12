@@ -6,7 +6,7 @@ const User = require("../models/User");
 const passport = require("passport");
 // const passportLocal = require("passport-local").Strategy;
 
-//@route POST api/v1/auth/login
+//@route POST api/auth/login
 //@desc Login a user
 //@access Public
 router.post(
@@ -43,7 +43,7 @@ router.post(
   }
 );
 
-//@route POST api/v1/auth/register
+//@route POST api/auth/register
 //@desc Register a user
 //@access Public
 router.post(
@@ -82,7 +82,7 @@ router.post(
   }
 );
 
-//@route POST api/v1/auth/logout
+//@route POST api/auth/logout
 //@desc Lougout a user
 //@access Public
 router.get("/logout", async (req, res) => {
@@ -93,7 +93,7 @@ router.get("/logout", async (req, res) => {
   // res.redirect("/");
 });
 
-//@route GET api/v1/auth/getuser
+//@route GET api/auth/getuser
 //@desc Get user data
 //@access Public
 router.get("/getuser", (req, res) => {

@@ -16,6 +16,7 @@ connectDB();
 
 //Defining Routes
 const auth = require("./routes/auth");
+const question = require("./routes/question");
 
 //Initialising App
 const app = express();
@@ -39,7 +40,7 @@ app.use(
   session({
     secret: "secretcode",
     resave: false,
-    saveUninitialized: true,
+    saveUninitialized: false,
   })
 );
 
@@ -56,6 +57,7 @@ if (process.env.NODE_ENV === "development") {
 
 //Using Router
 app.use("/api/auth", auth);
+app.use("/api/question", question);
 
 //Port number settings up
 const PORT = process.env.PORT || 5000;
