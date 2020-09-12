@@ -3,7 +3,7 @@ import { Route, Switch, BrowserRouter } from 'react-router-dom';
 
 import logo from './logo.svg';
 
-
+import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
 
 const Home= React.lazy(()=>import("./Pages/Home/Home"));

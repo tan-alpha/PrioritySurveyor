@@ -6,7 +6,7 @@
     border-radius: 15px;
 
     display: grid;
-    grid-template-rows:[page-start] repeat(1,150px) [about] 500px [customer-review] 300px [contact-us] 300px [page-end];
+    grid-template-rows:[page-start] repeat(1,150px) [about] 500px [customer-review] 700px [contact-us] 300px [page-end];
     /* grid-template-columns:repeat(4, [col-start] 1fr [col-end]) 450px [post-end] ; */
     /* grid-template-columns:  ; */
     grid-gap: 20px;
